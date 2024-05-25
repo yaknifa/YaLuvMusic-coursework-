@@ -1,0 +1,140 @@
+﻿<Window x:Class="YaMusicLuv.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YaMusicLuv"
+        mc:Ignorable="d"
+        Title="YaMusicLuv" Height="160" Width="500" ResizeMode="NoResize" Background="#FF333333"
+        WindowStyle="None">
+
+    <Window.Resources>
+        <!-- Стили для TextBox  -->
+        <Style TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Name="border" BorderThickness="1" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF8F0000" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF8F0000" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стили для Button -->
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="1" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF8F0000" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF8F0000" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для ComboBoxitem -->
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border Name="Border">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#FFFF6161"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#FFFF6161"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Background="#FF1D1D1D" Height="30" VerticalAlignment="Top" MouseLeftButtonDown="DragWindow">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Margin="17,7,115,7" Foreground="White" Text="YaLuvMusic"/>
+                <Button Content="—" Width="30" Height="30" Click="Collapse_Click" BorderBrush="Black" Grid.Column="2">
+                </Button>
+                <Button Content="Х" Width="30" Height="30" Click="Close_Click" Background="#FFB43B3B" BorderBrush="Black" Grid.Column="3"/>
+
+            </Grid>
+        </Border>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.03*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.03*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="1">
+                <Button Content="Скачать аудиофайл" Width="115" Height="20" Click="DownloadButton_Click" Background="#FFDDDDDD" BorderBrush="#FF121212"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1">
+                <TextBox x:Name="urlTextBox" Width="355" Height="20" TextWrapping="Wrap" Background="#FF333333" BorderBrush="Black" Foreground="White" SelectionBrush="#FF8F0000"/>
+                <ComboBox x:Name="formatComboBox" Width="100" Height="20">
+                    <ComboBoxItem Content="MP3"/>
+                    <ComboBoxItem Content="WAV"/>
+                    <ComboBoxItem Content="AAC"/>
+                </ComboBox>
+            </StackPanel>
+
+            <TextBlock Name="statusTextBlock" Grid.Row="1" HorizontalAlignment="Left" Width="470" TextWrapping="Wrap" Margin="14,26,0,26" Grid.RowSpan="3" Grid.ColumnSpan="2" Foreground="White"/>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="1">
+                <Button Content="Перейти в YouTube" Width="115" Height="20" Click="GoToYouTubeButton_Click" Foreground="#FF410808" BorderBrush="Black">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFF6161" Offset="1"/>
+                            <GradientStop Color="#FF483333"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button Content="О программе..." Width="115" Height="20" Click="InfoButton_Click" BorderBrush="#FF121212" Background="#FF5E5E5E" Foreground="Black"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

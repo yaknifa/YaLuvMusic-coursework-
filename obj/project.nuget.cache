@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "dgSpecHash": "BIC7Etvdk+F3qTXkn+QWC6/05q9aqQ3iDGaNmntCkapD36JWlkznvmfx6Evdcm+MZzfpeMb6R59cGVvpz0X+Cw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yaknifa\\Documents\\Visual Studio 2022\\fuckinVS\\testing_03\\testing_03.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yaknifa\\.nuget\\packages\\anglesharp\\1.1.2\\anglesharp.1.1.2.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\cliwrap\\3.6.6\\cliwrap.3.6.6.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\mediatoolkit\\1.1.0.1\\mediatoolkit.1.1.0.1.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\naudio\\2.2.1\\naudio.2.2.1.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\naudio.asio\\2.2.1\\naudio.asio.2.2.1.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\naudio.core\\2.2.1\\naudio.core.2.2.1.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\naudio.lame\\2.1.0\\naudio.lame.2.1.0.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\naudio.midi\\2.2.1\\naudio.midi.2.2.1.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\naudio.wasapi\\2.2.1\\naudio.wasapi.2.2.1.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\naudio.waveformrenderer\\2.0.0\\naudio.waveformrenderer.2.0.0.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\naudio.winforms\\2.2.1\\naudio.winforms.2.2.1.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\naudio.winmm\\2.2.1\\naudio.winmm.2.2.1.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\system.drawing.common\\5.0.1\\system.drawing.common.5.0.1.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\youtubeexplode\\6.3.14\\youtubeexplode.6.3.14.nupkg.sha512",
+    "C:\\Users\\yaknifa\\.nuget\\packages\\youtubeexplode.converter\\6.3.14\\youtubeexplode.converter.6.3.14.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"MediaToolkit 1.1.0.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "MediaToolkit",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}
